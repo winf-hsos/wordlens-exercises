@@ -1,0 +1,14 @@
+project:
+  title: "WordLens-Project Exercises"
+author: Prof. Dr. Nicolas Meseth
+subtitle: "The WordLens project"
+bibliography: references.bib
+lang: en
+format:
+  pdf:
+    toc: false
+    number-sections: false
+    colorlinks: true
+
+
+
