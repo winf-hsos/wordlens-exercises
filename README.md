@@ -2,7 +2,7 @@
 
 This repository contains the exercises for the [WorldLens project](https://wordlens.datalit.de).
 
-- [Exercise 01: Data Transformation and Visualization](https://github.com/winf-hsos/wordlens-exercises/raw/main/exercises/01_exercise_data_transformation_and_visualization.pdf)
+- [Exercise 1: Data Transformation and Visualization](https://github.com/winf-hsos/wordlens-exercises/raw/main/mandatory_exercises/01_exercise_data_transformation_and_visualization.pdf)
 
 # License
 

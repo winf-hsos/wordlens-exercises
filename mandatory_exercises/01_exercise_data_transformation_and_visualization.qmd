@@ -1,5 +1,5 @@
 ---
-title: "Exercise 1: Data Transformation and Visualization"
+title: "Data Transformation and Visualization"
 ---
 
 ## OVERVIEW
@@ -26,6 +26,7 @@ In this task, install the necessary software for the development environment on 
 
 -   A current version of the [R programming language](https://cran.rstudio.com/) (>= 4.2.3)
 -   The latest version of [RStudio Desktop](https://posit.co/download/rstudio-desktop/)
+-   A current version of the [Python programming language]()
 -   [Git](https://git-scm.com/downloads)
 
 To test your working environment, open a new terminal in RStudio and checkout the [GitHub code repository for the WordLens project](https://github.com/winf-hsos/wordlens-code). Install all required R-libraries and run the first script [`1_why_data_transformation.R`](https://github.com/winf-hsos/wordlens-code/blob/main/part_1/1_why_data_transformation.R) from top to bottom. If everything works properly, the script should produce two different visualizations.
@@ -72,43 +73,3 @@ For your first exercise, please submit:
 -   A screenshot (.jpg or .png) from your computer in which the `smoke_test.py` is opened in Visual Studio Code, the code is running without errors, and the terminal shows the line "Please hit enter to exit".
 
 Submit all files via the corresponding exercise in [ILIAS](https://lms.hs-osnabrueck.de).
-
-{{< pagebreak >}}
-
-
-## MORE EXERCISES TO PRACTICE
-
-### 4. Simple Transformations
-
-If you want to practice your data transformation (and partly visualization) skills with simpler exercises, try the following ones. You don't have to submit these. Solutions will be provided.
-
-1.  Filter the data set for tweets that are not retweets (i.e., `is_retweet` is FALSE).
-
-2.  Extract the top 10 tweets with the highest `retweet_count`.
-
-3.  Create a new column called `is_reply`, where the value is `TRUE` if `in_reply_to_screen_name` is not `NA` and `FALSE` otherwise
-
-4. Filter the data set for tweets with at least one hash tag. Sort the tweets by number of hash tags in them.
-
-5.  Filter the data set for tweets in the English language (`lang == "en"`) and containing at least one URL. 
-
-6.  *Unnest* the `urls` column. Then, count the frequency of each unique domain (e.g., "twitter.com").
-
-7.  Create a new column called `created_day` which extracts the date (without time) from the `created_at column`. Then, count the number of tweets per day and visualize the result as a time series.
-
-8.  Identify tweets that mention other users. *Unnest* the `user_mentions` column and calculate the number of times each user is mentioned. Then, find the top 10 most mentioned users.
-
-9.  For each user, calculate the proportion of their tweets that are retweets, replies, and quotes. Then, visualize the results as a stacked bar chart, where the x-axis represents users and the y-axis represents the proportion of each type of tweet.
-
-
-## MORE QUESTIONS TO PRACTICE
-
-Try to answer the following questions to practice your understanding of the topics around the WordLens project. The questions are optional and not part of the submission.
-
--   What are advantages of a Tibble over the classic R data frame?
-
--   What are the benefits of using the pipe operator `|>` when working with data in R? How does it improve code readability and organization?
-
--   In the context of data visualization, what is the Grammar of Graphics, and how does ggplot2 implement it? How does this framework help users create complex and customizable visualizations?
-
--   Research and explain the concept of "laziness" in data manipulation with dplyr. How do "lazy" operations improve efficiency when working with large datasets?
