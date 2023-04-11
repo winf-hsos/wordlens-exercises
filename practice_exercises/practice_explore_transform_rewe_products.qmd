@@ -1,22 +1,16 @@
 ---
-title: "Übung: REWE-Produktdaten erkunden und transformieren"
+title: "Explore and Transform REWE Products"
 ---
 
-### Vorbereitung
+## Preparation
 
 Ladet den Datensatz mit den Produkten des REWE-Onlineshops mit den folgenden Zeilen:
 
 ```{r}
 #| eval: false
 library(tidyverse)
-rewe <- read_csv("rewe_products.csv")
+rewe <- read_csv("data/rewe_products.csv")
 ```
-
-::: {.callout-note appearance="minimal"}
-Achtung: Der Code oben geht davon aus, dass die Datei `rewe_products.csv` in eurem Arbeitsverzeichnis liegt. Ist das nicht Fall, muss die Pfadangabe angepasst werden.
-:::
-
-Speichert die Zeilen in einem neuen R-Skript und tragt dort auch eure Lösungen für die folgenden Aufgaben ein. Vergesst nicht, die Datei zwischendurch zu speichern.
 
 ### Aufgabe 1: Datensatz erkunden
 
