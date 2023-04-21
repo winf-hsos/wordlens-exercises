@@ -18,25 +18,25 @@ rewe <- read_csv("data/rewe_products.csv")
 
 2.  Output all column names to the console!
 
-3. Which and how many columns have a numeric data type?
+3.  Which and how many columns have a numeric data type?
 
-4. Display the first 20 product names! How can you see all products?
+4.  Display the first 20 product names! How can you see all products?
 
-5. output the first 30 brands! What do you notice? How could you solve this?
+5.  Output the first 30 brands! What do you notice? How could you solve this?
 
-6. summarize the value ranges of the columns 'vegan' and 'vegetarian'. What do you think about the data quality of the two columns?
+6.  Summarize the value ranges of the columns 'vegan' and 'vegetarian'. What do you think about the data quality of the two columns?
 
-7. Create a summary of all columns that contain a value in grams. What different ways do you find to achieve this?
+7.  Create a summary of all columns that contain a value in grams. What different ways do you find to achieve this?
 
 ## Exercise 2: Select columns with `select`
 
 Find solutions for the following tasks, in which you have to select a subset of the columns:
 
-1. create a new data frame containing the product name, the product category and the sales price!
+1.  Create a new data frame containing the product name, the product category and the sales price!
 
-2. create a new data frame with all nutritional information as well as the product name and the product category!
+2.  Create a new data frame with all nutritional information as well as the product name and the product category!
 
-3. create a new data frame that contains only numeric columns. Check the columns and write down what you notice!
+3.  Create a new data frame that contains only numeric columns. Check the columns and write down what you notice!
 
 ## Exercise 3: Reduce rows with `filter`
 
@@ -67,7 +67,7 @@ Find a solution to restrict the rows of the data set as described:
 
 1. How many products are in the data set?
 
-2  How many products does each product category have?
+2.  How many products does each product category have?
 
 3. In addition to the product category and the number of products, now include the average selling price!
 

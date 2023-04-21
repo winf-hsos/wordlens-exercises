@@ -31,7 +31,7 @@ In this task, install the necessary software for the development environment on 
 
 To test your working environment, open a new terminal in RStudio and checkout the [GitHub code repository for the WordLens project](https://github.com/winf-hsos/wordlens-code). Install all required R-libraries and run the first script [`1_why_data_transformation.R`](https://github.com/winf-hsos/wordlens-code/blob/main/part_1/1_why_data_transformation.R) from top to bottom. If everything works properly, the script should produce two different visualizations.
 
-### Task 2: Transforming tweets
+### Task 2: Transforming Tweets
 
 In this task, you must apply your data transformation skills to modify the `tweets` data set in various ways. The goal is always to create a view on the data that gives answers to questions or that allows visualizing the data afterward.
 
@@ -51,7 +51,7 @@ In this task, you must apply your data transformation skills to modify the `twee
 
 8.  What hour of the day is the most active regarding the number of tweets? Create a tibble sorted by the hour of day and a second column with the average number of tweets!
 
-### Task 3: Visualizing tweets
+### Task 3: Visualizing Tweets
 
 In this task, you must combine your data transformation and data visualization skills to create a plot for each of the following questions:
 
