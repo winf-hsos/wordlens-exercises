@@ -4,14 +4,12 @@ title: "Search and Extract Text Data"
 
 ## OVERVIEW
 
-A intuitive first step to text analysis are simple **keyword and pattern searches and extraction** of certain elements from text data. Learning how to do this will improve your understanding of the challenges involved in NLP.
-
+Intuitive first steps to text analysis are simple **keyword and pattern searches**, **extractions**, or **replacements** of certain elements from text data. Learning how to do this will improve your understanding of the challenges involved in NLP.
 
 Here are the relevant lessons from the online script. Make sure you study them carefully, including the provided literature, in order to solve this exercise:
 
 -   [7 - Searching Text](https://wordlens.datalit.de/part-1-transform-and-visualize-data/working-environment)
 -   [8 - Imposing Structure](https://wordlens.datalit.de/part-2-rule-based-nlp/8-imposing-structure)
-
 
 Good Luck!
 
@@ -19,52 +17,44 @@ Good Luck!
 
 To pass this exercise, you must complete the following tasks and submit your results via [ILIAS](https://lms.hs-osnabrueck.de). You find the submission details below.
 
-### Task 1: Tweet Searches
+### Task 1: Search, Extract and Transform Tweets
 
-In the first task, you apply various search techniques to filter the tweets.
+1.  Extract the most common emoticons from the tweets and create a top 10 list by frequency.
 
+2.  Extract the common hashtags for the different political parties, such as `#spd`, `#gruene`, or `#fdp` (see if you can find more) from the tweets. Which users include their party's hashtag(s) most often in their tweets?
 
-### Task 2: Tweet Exploration with Text Data
+3.  Extract all hashtags in tweets from the current year. Count how often each hashtag was used and create a top 20 list.
 
-Hashtag analysis: Have the students extract and count the occurrence of hashtags in the 'text' column to identify the most popular hashtags. They can use str_extract_all() to extract hashtags and dplyr::count() to count the occurrences.
+4.  Whom does Christian Lindner mention most often in his tweets?
 
-Mention analysis: Similar to the hashtag analysis, students can extract and count user mentions in the 'text' column to identify the most mentioned users. They can use str_extract_all() and dplyr::count() for this task.
+5.  Create a list with (at least) ten positive words and ten negative words. Search for both sets of words in the tweets and calculate a sentiment score by adding 1 for a match of a positive and -1 for a negative word. Find the tweets with the highest and lowest scores.
 
-Sentiment analysis: Have the students create a list of positive and negative words. Then, they can use str_detect() to count the occurrence of positive and negative words in the 'text' column and calculate a sentiment score for each tweet.
+6.  From the `source` column, extract the app the user cretaed the tweet with. Create a new column called `twitter_app` that contains the values "Twitter for iPhone" or "Twitter for Mac" and so on. How are the values distributed?
 
-Source analysis: Ask students to use str_extract() to extract the source name from the 'source' column (e.g., "Twitter for iPhone") and create a new column with the extracted source. Then, have them analyze the distribution of sources across the dataset.
+7.  Search for tweets with URLs in the text and calculate the percentage of tweets containing a URL.
 
-URL analysis: Instruct students to identify tweets containing URLs in the 'text' column using str_detect() and then calculate the percentage of tweets with URLs. They can also use str_extract() to extract the URLs and analyze the most common domains shared.
+8.  Remove the "RT" text from the beginning of all tweets! What does it mean and what column does it relate to?
 
-Text cleaning: Have students practice text cleaning by removing special characters, URLs, user mentions, and hashtags from the 'text' column using str_replace_all().
+9.  Remove all non-alphanumeric characters from the tweets!
 
-Word frequency: After cleaning the text data, students can split the 'text' column into individual words using tidytext::unnest_tokens() and then count the frequency of words to identify the most common words in the dataset.
+## Task 2: Word Count in Tweets
 
-Date analysis: Have students extract the day of the week from the 'created_at' column using lubridate::wday() and then analyze the distribution of tweets across different days of the week.
+1.  Create a new tibble that contains only tweets from the current year and that are written in German!
 
-Time of day analysis: Similar to date analysis, students can extract the hour from the 'created_at' column using lubridate::hour() and analyze the distribution of tweets across different hours of the day.
+2.  Using the new tibble, prepare the tweet's `text` column for tokenization and convert them to lowercase and remove all unnecessary characters, user mentions, urls, hashtags, and punctuation. Replace all occurrences of more than one space with a single space.
 
-Retweet vs. original tweets: Have students create a pie chart to visualize the proportion of retweets and original tweets in the dataset using the 'is_retweet' column. They can use dplyr::count() and ggplot2::geom_col() for this task.
+3.  After cleaning the text data, split the `text` column into individual words and then count the frequency of words to identify the most common words in the dataset. What is the top 10 of words across all tweets?
 
+4.  Remove common German stop words from the list. Which words are now the most frequently used in all tweets?
 
-### Task 3: Visualizing Tweets
-
-In this task, you must combine your data transformation and data visualization skills to create a plot for each of the following questions:
-
-1.  Is there an association between the number of retweets and the number of likes (favorites) a tweet gets?
-
-2.  Visualize the development of the total number of tweets per month by political party (SPD, Grüne, FDP)! What do you observe, and how could you explain this phenomenon?
-
-3.  Create a suitable visualization for the last question from the previous exercise to uncover patterns in the use of Twitter over the hours of the day!
-
-4.  Extend on the previous visualization and create a separate plot for each political party (SPD, Grüne, FDP) in one visualization (hint: `facet_wrap` might help) to highlight potential differences in usage patterns across the political parties.
+5. See if you can assign topics to each one of the most frequently used word. Focus especially on the nouns. Try to identify the tweets belonging to each topic you found.
 
 ## SUBMISSION
 
 For your first exercise, please submit:
 
--   Two R-scripts with your solution to the tasks 2 & 3:
-    1.  `task_1_transforming_tweets.R`
-    2.  `task_2_visualizing_tweets.R`
+-   Two R-scripts with your solution to the tasks 1 & 2:
+    1.  `task_1_search_extract_transform_tweets.R`
+    2.  `task_2_word_count_in_tweets.R`
 
 Submit all files via the corresponding exercise in [ILIAS](https://lms.hs-osnabrueck.de).
